@@ -1,3 +1,6 @@
+@import "style2.css";
+@import "style3.css";
+
 .container{
   font-family: Lato, sans-serif;
   display:grid;
@@ -12,6 +15,15 @@
   "hl"
   "ft";
 }
+
+
+.nestedGrid{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  padding-top: 40px;
+    }
+
 
 .containerpost{
   font-family: Lato, sans-serif;
@@ -44,15 +56,7 @@
 
 }
 
-.nestedGrid{
-  grid-area: main;
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 33% 33% 33%;
-  justify-content: center;
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
+
 
 .topnav{
   grid-area: nav;
@@ -75,54 +79,9 @@
     grid-area:hd;
     background: linear-gradient(80deg, #FFFCD3,#C1FFEC);
     text-align: center;
-    padding-top: 50px;
+    padding-top: 10px;
     padding-left: 60px;
     padding-right: 60px;
-  }
-
-
-  .headerblog{
-    grid-area:hd;
-    background: #F2FD76;
-    height: 100%;
-    background-position: center;
-    text-align: center;
-    background-repeat: repeat;
-    background-size: contain;
-    position: relative;
-  }
-
-  .headerblog2{
-    grid-area:hd;
-    background: #06070a;
-    height: 100%;
-    background-position: center;
-    text-align: center;
-    background-repeat: repeat;
-    background-size: contain;
-    position: relative;
-  }
-
-  .headerblog3{
-    grid-area:hd;
-    background: #e9aaa6;
-    height: 100%;
-    background-position: center;
-    text-align: center;
-    background-repeat: repeat;
-    background-size: contain;
-    position: relative;
-  }
-
-  .headerblog4{
-    grid-area:hd;
-    background: #a7dbd7;
-    height: 100%;
-    background-position: center;
-    text-align: center;
-    background-repeat: repeat;
-    background-size: contain;
-    position: relative;
   }
 
 
@@ -162,99 +121,6 @@
     justify-content: center;
   }
 
-  .blogpost2{
-    grid-area: hl;
-    background: #ffffff;
-    padding-left: 30px;
-    padding-right: 30px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    justify-content: center;
-  }
-
-  .post{
-    grid-area: main;
-    padding-left: 30px;
-    padding-right: 30px;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    justify-content: center;
-  }
-
-  .hlimage{
-    width: 60%;
-    max-width: 500px;
-    padding-bottom: 10px;
-    
-  }
-  .navpicture{
-    padding-top: 15px;
-    padding-bottom: 5px;
-    padding-left: 22px;
-    padding-right: 5px;
-    float: left;
-  }
-
-  .hamburger{
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 22px;
-    float: right;
-    z-index: 2;
-  }
-  
-  .header1{
-    font-size: 35px;
-    font-weight: bold;
-  }
-
-
-  .header2{
-    font-size: 20px;
-    font-weight: medium;
-    padding-bottom: 10px;
-  }
-
-  .paragraph{
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 16px;
-    line-height: 25px;
-  }
-
-  .yellowbutton{
-    color: black;
-    text-decoration: none;
-    width: 137px;
-    background-color: #FFED0F;
-    border-radius: 26px;
-    font-size: 14px;
-    text-align: center;
-    display: inline-block;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    box-shadow: 2px 2px 2px #DBDBDB;
-  }
-
-  .whitebutton{
-    color: black;
-    text-decoration: none;
-    width: 137px;
-    border-radius: 11px;
-    font-size: 14px;
-    border: 1px solid black;
-    text-align: center;
-    display: inline-block;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    box-shadow: 2px 2px 2px #DBDBDB;
-  }
-
 
   .whitebutton-noshadow{
     color: black;
@@ -277,82 +143,3 @@
 
 
 /* If Screen Is Wide Enough */
-@media(min-width:900px) {
-.container{
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 125px 300px 500px 850px 65px;
-    grid-template-areas: 
-    "nav nav nav nav"
-    "hd hd hd hd hd"
-    "main main main main"
-    "hl hl hl hl"
-    "ft ft ft ft ft";
-  }
-
-  .containerpost{
-    font-family: Lato, sans-serif;
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 125px 300px 800px 400px 65px;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* Initially each element has its own row for small screens */
-    grid-template-areas:
-    "nav nav nav nav" 
-    " hd hd hd hd hd"
-    "main main main main"
-    "cont cont cont cont"
-    "ft ft ft ft ft";
-  }
-
-
-.navtext{
-  color: #06070a;
-  text-decoration: none;
-  padding: 10px;
-}
-.navtext:hover {
-  background-color: yellow;
-}
-
-.topnavbuttons{
-  padding-top: 30px;
-  padding-left: 20px;
-
-}
-
-.nestedGrid{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 33% 33% 33% ;
-    grid-template-rows: 100%;
-    justify-content: center;  
-    }
-
-
- .nestedGrid2{
-    grid-area: cont;
-    display: grid;
-    grid-template-columns: 33% 33% 33% ;
-    grid-template-rows: 100%;
-    justify-content: center;  
-    }
-
-
-.hlimage{
-    width: 70%;
-    max-width: 550px;
-
-}
-.paragraph{
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 300px;
-    padding-right: 300px;
-    font-size: 16px;
-    line-height: 25px;
-}
-
-
-
-}
